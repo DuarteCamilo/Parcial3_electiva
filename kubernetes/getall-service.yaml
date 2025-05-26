@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: getall-service
+spec:
+  selector:
+    app: getall-service
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: ClusterIP
