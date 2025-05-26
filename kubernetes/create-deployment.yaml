@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: create-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: create-service
+  template:
+    metadata:
+      labels:
+        app: create-service
+    spec:
+      containers:
+      - name: create-service
+        image: car-microservice:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mariadb://mariadb-car:3306/carsdb
+        - name: SERVICE_TYPE
+          value: "create"
