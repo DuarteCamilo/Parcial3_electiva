@@ -1,0 +1,17 @@
+target/
+.mvn/
+.git/
+.gitignore
+.gitattributes
+README.md
+Parcial3.pdf
+
+target/
+.git/
+.gitignore
+.idea/
+*.iml
+*.md
+.mvn/
+mvnw
+mvnw.cmd
