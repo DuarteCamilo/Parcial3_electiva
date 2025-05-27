@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: car-services-ingress
 spec:
+  ingressClassName: nginx
   rules:
   - host: car-api.local
     http:

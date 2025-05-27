@@ -5,12 +5,12 @@ meta:
   created: 1748161589192
   modified: 1748161589192
 collection:
-  - url: http://localhost:8080/api/cars-get-all
+  - url: http://car-api.local/api/cars-get-all
     name: Get All
     meta:
       id: req_3977304f3a144cd48524bb83810a444e
       created: 1748161589196
-      modified: 1748161713365
+      modified: 1748319680936
       isPrivate: false
       sortKey: -1743901050285
     method: GET
@@ -25,12 +25,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/api/cars/2
+  - url: http://car-api.local/api/cars-get-by-id/1
     name: Get By Id
     meta:
       id: req_63d19419b31d4affb2b10cfb0f778339
       created: 1748161589198
-      modified: 1748161589198
+      modified: 1748319897462
       isPrivate: false
       sortKey: -1743901084657
     method: GET
@@ -48,12 +48,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/api/cars-create
+  - url: http://car-api.local/api/cars-create
     name: Create
     meta:
       id: req_a32042a0622c42e1b7905f7672e021f8
       created: 1748161589200
-      modified: 1748161792197
+      modified: 1748320001402
       isPrivate: false
       sortKey: -1743901193696
     method: POST
@@ -80,12 +80,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/api/cars-update/13
+  - url: http://car-api.local/api/cars-update/2
     name: Update
     meta:
       id: req_333a6db2bf5f449aaa78a7e028f17d18
       created: 1748161589201
-      modified: 1748162062048
+      modified: 1748320014521
       isPrivate: false
       sortKey: -1743901282842
     method: PUT
@@ -96,7 +96,7 @@ collection:
           "brand": "Toyota",
           "model": "Corolla",
           "year": 2023,
-          "color": "Azul",
+          "color": "verde",
           "price": 27000.0
         }
     headers:
@@ -112,12 +112,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/api/cars-delete/13
+  - url: http://car-api.local/api/cars-delete/2
     name: Delete
     meta:
       id: req_ef3ef7619851447fb332485efa816f28
       created: 1748161589203
-      modified: 1748162075108
+      modified: 1748320026656
       isPrivate: false
       sortKey: -1743901353451
     method: DELETE
