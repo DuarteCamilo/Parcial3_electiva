@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: car-services-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: car-api.local
+    http:
+      paths:
+      - path: /api/cars-create
+        pathType: Prefix
+        backend:
+          service:
+            name: create-service
+            port:
+              number: 80
+      - path: /api/cars-delete
+        pathType: Prefix
+        backend:
+          service:
+            name: delete-service
+            port:
+              number: 80
+      - path: /api/cars-update
+        pathType: Prefix
+        backend:
+          service:
+            name: update-service
+            port:
+              number: 80
+      - path: /api/cars-get-by-id
+        pathType: Prefix
+        backend:
+          service:
+            name: getbyid-service
+            port:
+              number: 80
+      - path: /api/cars-get-all
+        pathType: Prefix
+        backend:
+          service:
+            name: getall-service
+            port:
+              number: 80

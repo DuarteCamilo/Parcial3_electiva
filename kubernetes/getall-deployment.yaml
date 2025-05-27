@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getall-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: getall-service
+  template:
+    metadata:
+      labels:
+        app: getall-service
+    spec:
+      containers:
+      - name: getall-service
+        image: car-microservice:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mariadb://mariadb-car:3306/carsdb
+        - name: SERVICE_TYPE
+          value: "getall"

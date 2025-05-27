@@ -1,0 +1,147 @@
+type: collection.insomnia.rest/5.0
+name: Parcial3 Car API
+meta:
+  id: wrk_9ec138dc48334c06afe37dff17e1fe84
+  created: 1748161589192
+  modified: 1748161589192
+collection:
+  - url: http://car-api.local/api/cars-get-all
+    name: Get All
+    meta:
+      id: req_3977304f3a144cd48524bb83810a444e
+      created: 1748161589196
+      modified: 1748319680936
+      isPrivate: false
+      sortKey: -1743901050285
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://car-api.local/api/cars-get-by-id/1
+    name: Get By Id
+    meta:
+      id: req_63d19419b31d4affb2b10cfb0f778339
+      created: 1748161589198
+      modified: 1748319897462
+      isPrivate: false
+      sortKey: -1743901084657
+    method: GET
+    parameters:
+      - id: pair_63513b87a59946ce984b2f11a4d4fc4a
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://car-api.local/api/cars-create
+    name: Create
+    meta:
+      id: req_a32042a0622c42e1b7905f7672e021f8
+      created: 1748161589200
+      modified: 1748320001402
+      isPrivate: false
+      sortKey: -1743901193696
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "brand": "Toyota",
+          "model": "Corolla",
+          "year": 2022,
+          "color": "Rojo",
+          "price": 25000.0
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://car-api.local/api/cars-update/2
+    name: Update
+    meta:
+      id: req_333a6db2bf5f449aaa78a7e028f17d18
+      created: 1748161589201
+      modified: 1748320014521
+      isPrivate: false
+      sortKey: -1743901282842
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "brand": "Toyota",
+          "model": "Corolla",
+          "year": 2023,
+          "color": "verde",
+          "price": 27000.0
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://car-api.local/api/cars-delete/2
+    name: Delete
+    meta:
+      id: req_ef3ef7619851447fb332485efa816f28
+      created: 1748161589203
+      modified: 1748320026656
+      isPrivate: false
+      sortKey: -1743901353451
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_554789dd01734042bf1bcc5a712b9cc5
+    created: 1748161589194
+    modified: 1748161589194
+environments:
+  name: Base Environment
+  meta:
+    id: env_3acdc287f38a467ebf72c4e203782b8b
+    created: 1748161589193
+    modified: 1748161589193
+    isPrivate: false
