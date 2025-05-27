@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: getall-service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: getall-service
