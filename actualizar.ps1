@@ -16,7 +16,7 @@ foreach ($component in $components) {
     $filePath = "kubernetes\$component"
     if (Test-Path -Path $filePath) {
         Write-Host "Aplicando '$component'..."
-        kubectl apply -f $filePath
+        kubectl apply -n parcial3 -f $filePath
     } else {
         Write-Warning "Archivo no encontrado: $filePath"
     }
@@ -26,10 +26,10 @@ Write-Host "Actualización completada."
 
 # Verificar estado
 Write-Host "`nEstado actual de los pods:"
-kubectl get pods
+kubectl get pods -n parcial3
 
 Write-Host "`nEstado actual de los servicios:"
-kubectl get services
+kubectl get services -n parcial3
 
 Write-Host "`nReglas de Ingress:"
-kubectl get ingress
+kubectl get ingress -n parcial3
