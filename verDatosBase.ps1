@@ -3,7 +3,7 @@ $dbPass = "root"
 $dbName = "carsdb"
 
 # Buscar el pod que comienza con "mariadb-car-"
-$podName = kubectl get pods --no-headers | Where-Object { $_ -match "^mariadb-car-" } | ForEach-Object { ($_ -split '\s+')[0] } | Select-Object -First 1
+$podName = kubectl get pods -n parcial3 | Where-Object { $_ -match "^mariadb-car-" } | ForEach-Object { ($_ -split '\s+')[0] } | Select-Object -First 1
 
 if (-not $podName) {
     Write-Host "No se encontró ningún pod que comience con 'mariadb-car-'."
